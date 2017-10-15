@@ -1,5 +1,6 @@
 class Project < ApplicationRecord
 	
+	#Checks that an image has been atatched
 	has_attached_file :image
 
   # Validate the attached image is image/jpg, image/png, etc
@@ -7,4 +8,5 @@ class Project < ApplicationRecord
   validates :title, :description, presence: true
 
   has_many :tags
+
 end
